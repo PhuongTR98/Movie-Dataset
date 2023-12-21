@@ -1,6 +1,6 @@
 # Movie-Dataset
-The data set contains information about 10,000 movies collected from The Movie Database (TMDb), including user ratings and revenue, starting from the year 1960.
-This project aims to answer to the questions: "How has the movie industry changed over years?" and "What factors impact a film's revenue?".
+**The data set contains information about 10,000 movies collected from The Movie Database (TMDb), including user ratings and revenue, starting from the year 1960.** 
+<br>This project aims to answer to the questions: "How has the movie industry changed over years?" and "What factors impact a film's revenue?".</br>
 Table of Contents
 Introduction
 Data Wrangling
