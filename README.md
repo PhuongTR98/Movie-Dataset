@@ -1,16 +1,26 @@
-# Movie-Dataset
-**The data set contains information about 10,000 movies collected from The Movie Database (TMDb), including user ratings and revenue, starting from the year 1960.** 
-<br>This project aims to answer to the questions: "How has the movie industry changed over years?" and "What factors impact a film's revenue?".</br>
-## Table of Contents
- 1. Introduction
- 2. Data Wrangling
- 3. Exploratory Data Analysis
-    - Question 1: The Output of Movies Over the Years
-    - Question 2: The Average Runtime of Movies Over the Years
-    - Question 3: The Movie Genres Over the Years
-    - Question 4: Actors with the Most Appearances in Movies
-    - Question 5: Directors with the Most Movies
-    - Question 6: Profit Over Years
-    - Question 7: Top Movies Based on Features
-    - Question 8: Correlations
- 4. Conclusions
+# WLS 알고리즘에서 예측된 위치의 신뢰성을 추정 
+<br>문제의 목적은 "WLS가 추정한 위치의 신뢰 수준을 백분율로 표시"하는 것입니다.
+
+Python version: 3.12.6.</br>
+
+## 콘텐츠
+ 1. 야외 데이터 세트만을 사용한 모델 학습.
+ 2. Reliability_Level 대신 삼각형 크기와 삼각형 개수를 사용하여 모델 학습.
+ 3. 모델의 계수를 [−1,1] 범위로 변환.
+ 4. 두 개의 새로운 수집된 데이터 세트에 대한 모델 성능 평가:
+    - 4.1: 훈련된 데이터 세트와 유사: 장애물 없음.
+    - 4.2: 훈련된 데이터 세트와 다름: 장애물(덤불) 있음, 높은 위치.
+ 5. 결론:
+    - Reliability_level을 사용하여 모델을 훈련하면 삼각형 크기와 삼각형 개수를 사용하는 것보다 더 나은 성능을 얻을 수 있습니다.
+    - 야외및 장애물 없는 데이터 세트로 훈련된 모델은 실제로 야외및 장애물 없는 데이터 세트로 테스트했을 때 높은 정확도를 보였지만 Recall(재현율) 은 감소했습니다.
+    - 야외및 장애물 없는 데이터 세트를 사용하여 학습한 모델은 야외및 장애물이 있는 실제 데이터 세트에서 테스트할 경우 효과적이지 않습니다.
+
+ 6. 문제:
+    - 야외및 장애물이 있는 데이터 세트의 실제 오류 거리 비율 <10m는 수집된 총 데이터의 16%(272/1666)에 불과합니다.
+ 7. 제안:
+    - 야외및 장애물이 있는 데이터를 수집하여 모델 성능을 구축하고 개선합니다.
+    - 야외및 장애물이 있는 데이터 세트에 대한 Range_reliability를 기반으로 2개의 다른 모델을 훈련합니다.
+      
+
+ 
+
